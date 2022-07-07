@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color-1.css">
+
+    <title>Starucks</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href=""><img src="images/1.png" class="logo" alt=""></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>One of the greatest love affairs of all time is between you and your coffee. There's not a day that goes by when you don't wake up and gaze lovingly at your favorite mug, or daydream about your run to get a cold brew. Your heart is full of butterflies when you imagine your go-to barista sliding your drink across the counter and into your welcoming hands. But, it’s not just any coffee that you're in love with — it’s Starbucks’ full menu of tasty drinks.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/2.png" alt="" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/2.png" onclick="imgSlider('images/2.png');changeCircleColor('#017143')" alt=""></li>
+            <li><img src="images/3.png" onclick="imgSlider('images/3.png');changeCircleColor('#eb7495')" alt=""></li>
+            <li><img src="images/4.png" onclick="imgSlider('images/4.png');changeCircleColor('#d752b1')" alt=""></li>
+     </ul>
+      <ul class="sci">
+            <li><a href=""><img src="images/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="images/instagram.png" alt=""></a></li>
+            <li><a href=""><img src="images/twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector(".starbucks").src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector(".circle");
+            circle.style.background = color;
+        }
+    function toggleMenu(){
+        var menuToggle = document.querySelector(".toggle");
+        var navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+    }
+    </script>
+</body>
+</html>

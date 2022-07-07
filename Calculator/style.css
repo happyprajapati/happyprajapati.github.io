@@ -1,0 +1,88 @@
+:root{
+    --bg-color-900: #ecf0f3;
+    --text-color-900: #000;
+    --text-color-700: rgb(70, 70, 70);
+    --shadow-color-900: rgba(0,0,0,.16);
+    --shadow-color-700: #fff;
+}
+body.dark{
+    --bg-color-900: #091921;
+    --text-color-900: #fff;
+    --text-color-700: rgb(242, 240, 240);
+    --shadow-color-900: rgba(255, 255, 255, 0.16);
+    --shadow-color-700: #000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg-color-900);
+    font-family: sans-serif;
+    outline: none;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+.calculator{
+    background: var(--bg-color-900);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px var(--shadow-color-700),
+                      5px 5px 12px var(--shadow-color-900);
+    display: grid;
+    grid-template-columns: repeat(4,68px);
+}
+input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background: var(--bg-color-900);
+    box-shadow: inset -5px -5px 12px var(--shadow-color-700),
+                inset 5px 5px var(--shadow-color-900);
+    border: none;
+    border-radius: 30px;
+    color: var(--text-color-700);
+    font-size: 50px;
+    text-align: end;
+    margin: 40px auto 30px;
+    padding: 20px;
+}
+button{
+    height: 48px;
+    width: 48px;
+    background: var(--bg-color-900);
+    box-shadow:  -5px -5px 12px var(--shadow-color-700),
+                    5px 5px var(--shadow-color-900);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color-900);
+}
+.equal{
+    width: 115px;
+    border-radius: 40px;
+    background: var(--bg-color-900);
+    box-shadow:  -5px -5px 12px var(--shadow-color-700),
+                    5px 5px var(--shadow-color-900);
+}
+.toggle{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.toggle i{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--shadow-color-700);
+    color: var(--text-color-900);
+}
