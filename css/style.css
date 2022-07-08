@@ -777,3 +777,9 @@ h3 .hello span{
         max-width: 100%;
     }
 }
+@media (max-width:470px){
+    .about .about-content .personal-info .info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
